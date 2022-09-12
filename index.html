@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!-- Mirrored from www.nmenos1.xyz/public/residencia/show/5 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Jul 2022 02:31:52 GMT -->
+  <!-- Added by HTTrack --><meta
+    http-equiv="content-type"
+    content="text/html;charset=UTF-8"
+  /><!-- /Added by HTTrack -->
+  <head>
+    <!--
+      This is the page head - it contains info the browser uses to display the page
+      You won't see what's in the head in the page
+      Scroll down to the body element for the page content
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <title>Pasteles Feos</title>
+
+    <!-- Meta tags for SEO and social sharing -->
+    <meta
+      name="description"
+      content="Pasteles Feos de Alexandra Arciniegas y Nmenos1"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Pasteles Feos" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="../../../index.html" />
+    <meta
+      property="og:description"
+      content="Pasteles Feos de Alexandra Arciniegas y Nmenos1"
+    />
+    <meta property="og:image" content="public/hello-website-social.png" />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" type="text/css" href="pastelesFeos.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <!-- <script src="/script.js" defer></script> -->
+    <!-- <script src="../../assets/nmenos1/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../assets/nmenos1/bower_components/jquery-ui/jquery-ui.js"></script> -->
+    <script>
+      $(document).ready(function () {
+        $('#pedidoTorta').submit(function (e) {
+          $mensaje = '';
+
+          //alert( $("#moldeCorazon").is(':checked') + '  -  ' + $("#moldeRedondo").is(':checked') );
+
+          if (
+            !$('#moldeCorazon').is(':checked') &&
+            !$('#moldeRedondo').is(':checked')
+          ) {
+            $mensaje += 'Debes seleccionar un tipo de molde\n';
+          }
+          if (
+            $('#moldeCorazon').is(':checked') &&
+            $('#moldeRedondo').is(':checked')
+          ) {
+            $mensaje += 'Debes seleccionar un solo tipo de molde\n';
+          }
+          if (
+            !$('#cuartoLib').is(':checked') &&
+            !$('#mediaLib').is(':checked')
+          ) {
+            $mensaje += 'Debes seleccionar un tama\u00F1o\n';
+          }
+          if ($('#cuartoLib').is(':checked') && $('#mediaLib').is(':checked')) {
+            $mensaje += 'Debes seleccionar un solo tama\u00F1o\n';
+          }
+          if ($('#descripPedido').val() == '') {
+            $mensaje += 'Cu\u00E9ntanos de que se tratar tu idea\n';
+          }
+          if ($('#nombre').val() == '') {
+            $mensaje += 'Debes ingresar tu nombre\n';
+          }
+          if ($('#numCelular').val() == '') {
+            $mensaje += 'Debes ingresar tu n\u00FAmero de celular\n';
+          }
+
+          if ($mensaje != '') {
+            e.preventDefault();
+            alert($mensaje);
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="contentp">
+      <div class="logo">
+        <img id="logoAngel" src=" public/logo.png" alt:"angel">
+      </div>
+      <div class="cont1">
+        <h1>Dilo en una torta!</h1>
+        <h2>Escoge tu pastel</h2>
+        <img id="moldes" src="public/formas.png" />
+        <form
+          id="pedidoTorta"
+          action="https://www.nmenos1.xyz/public/residencia/uploadR5"
+          method="post"
+          enctype="multipart/form-data"
+          onsubmit="return validarDatos()"
+        >
+          <input
+            type="hidden"
+            name="_token"
+            value="zEg3vQcXVehEL1aCQHztvTLZ6dNxiP1biP4YlGzy"
+          />
+          <input
+            id="moldeCorazon"
+            name="molde"
+            value="Corazon"
+            type="checkbox"
+          />
+          <input
+            id="moldeRedondo"
+            name="molde"
+            value="Redondo"
+            type="checkbox"
+          />
+          <h2>Tama&ntilde;os:</h2>
+          <label for="cuartoLib">Un cuarto de Libra</label>
+          <input
+            type="checkbox"
+            id="cuartoLib"
+            name="tamano"
+            value="Cuarto de Libra"
+          />
+          <label for="mediaLib">Media Libra</label>
+          <input
+            type="checkbox"
+            id="mediaLib"
+            name="tamano"
+            value="Media Libra"
+          />
+          <h2>Cu&eacute;ntame de qu&eacute; se trata:</h2>
+          <textarea
+            type="subject"
+            id="descripPedido"
+            name="descripPedido"
+            placeholder="Tu idea..."
+          ></textarea>
+          <p>Precios: 80,000 COP y 100,000 COP proporcional al tama&ntilde;o</p>
+          <h3>
+            Mejor ponerle tu cara a un pastel, que un pastel a tu cara.
+            As&iacute; que si quieres<br />
+            <img src="public/Layer-17.png" alt="Sube una imagen" />
+          </h3>
+          <input type="file" id="chooseFile" name="filename" /><br />
+          <label for="nombre">Nombre</label><br />
+          <input type="text" name="nombre" id="nombre" /><br />
+          <label for="numCelular">N&uacute;mero Celular</label><br />
+          <input type="text" name="numCelular" id="numCelular" /> <br />
+          <input type="submit" value="Enviar" />
+        </form>
+
+        <div class="galeria">
+          <div class="boton">
+            <img id="pastel" src="public/Layer-19.png" />
+            <a
+              href="https://instagram.com/pasteles_feos?utm_medium=copy_link"
+              target="_new"
+            >
+              <img id="verGaleria" src="public/Layer-18.png" />
+            </a>
+          </div>
+          <div class="inspo">
+            <h4>
+              Inspiraci&oacute;n <br />
+              IG:
+              <a
+                href="https://instagram.com/passtelessfeoss?utm_medium=copy_link"
+                target="_new"
+                >@passtelessfeos</a
+              >
+            </h4>
+            <h3>
+              Tambi&eacute;n puedes enviarme una nota de voz<br />
+              largu&iacute;sima al whatsapp
+            </h3>
+            <a href="#"><img id="whatsapp" src="public/Layer-20.png" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="logoFooter">
+      <img src="public/logofoot.png" />
+    </div>
+  </body>
+
+  <!-- Mirrored from www.nmenos1.xyz/public/residencia/show/5 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 05 Jul 2022 02:32:26 GMT -->
+</html>

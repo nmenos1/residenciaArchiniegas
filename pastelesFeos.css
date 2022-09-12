@@ -1,0 +1,183 @@
+@font-face {
+  font-family: 'Comic'; /* This is an arbitrary name -- whatever works for you */
+  src: url('https://cdn.glitch.com/ee92c7f0-ca12-4cfa-8cd2-6644ddd3fc21%2FCOMIC.TTF?v=1628706984338');
+       url('https://cdn.glitch.com/ee92c7f0-ca12-4cfa-8cd2-6644ddd3fc21%2FCOMIC.TTF?v=1628706984338') format('ttf'),
+}
+
+
+body {
+  background-image: url(../../../../cdn.glitch.me/ee92c7f0-ca12-4cfa-8cd2-6644ddd3fc21/Group%205%20copy.png?v=1628611194276);
+  font-size: 2vw;
+  margin: 0;
+  font-family: "Comic", sans-serif;
+}
+
+.contentp {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+}
+
+#logoAngel {
+  width: 40%;
+}
+
+#moldes {
+  width: 60%;
+}
+
+h1 {
+  font-size: 5vw;
+}
+
+h2 {
+  font-size: 3.5vw;
+}
+
+label {
+  font-size: 2vw;
+}
+
+input[type="text"] {
+  border: solid rgb(255, 0, 255);
+  padding: 0 10px;
+  margin: 0;
+  width: 40%;
+  height: 50px;
+  font-size: 2vw;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  background-color: rgb(255, 255, 0);
+  
+}
+
+
+input[type="checkbox"] {
+  margin: 0 10px;
+  width: 5vw;
+  height: 5vh;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  width: 20%;
+  height: 7vh;
+  font-size: 2vw;
+  margin: 3% 0;
+  background-color: rgb(255, 0, 255);
+  color: whitesmoke;
+  border: solid white;
+  cursor: pointer;
+  font-family: "Comic";
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(255, 255, 0);
+  color: rgb(255, 0, 255);
+  border: solid rgb(255, 0, 255);
+}
+
+
+#moldeCorazon,
+#moldeRedondo {
+  margin: 0 12%;
+}
+
+input[type="file"] {
+  width: 60%;
+  height: 20%;
+  cursor: pointer;
+  font-size: 1.5vw;
+  margin: 2% 0 5% 0;
+}
+
+textarea[type="subject"] {
+  width: 70%;
+  height: 200px;
+  margin-top: 2%;
+  border: 5px solid rgb(255, 0, 255);
+  font-family: sans-serif;
+  font-size: 2vw;
+}
+
+#descripPedido:focus {
+  outline: none;
+}
+
+.galeria {
+  background-color: rgb(255, 0, 255, 0.7);
+  position: relative;
+  text-align: center;
+  margin-top: 30%;
+  color: whitesmoke;
+  
+}
+
+.boton {
+  width: 100%;
+  height: 20vh;
+}
+
+#pastel {
+  z-index: 5;
+  display: inline-block;
+  position: absolute;
+  top: -10%;
+  left: 25%;
+  width: 50%;
+}
+
+#verGaleria {
+  z-index: 10;
+  display: inline-block;
+  position: absolute;
+  top: 20%;
+  width: 30%;
+  left: 35%;
+}
+
+.inspo {
+  margin-top: 20%;
+  position: relative;
+  
+}
+
+#whatsapp {
+  width: 20%;
+}
+
+.logoFooter {
+  background-color: rgb(255, 0, 255);
+  width: 100%;
+  min-height: 10vh;
+  text-align: center;
+  margin: 5% 0 0 0;
+  padding: 0;
+}
+
+.logoFooter img {
+  width: 10%;
+  margin: 3% 0;
+}
+
+.alert-success {
+	width: auto;
+  padding: 30px 0 30px 0;
+  background-color: #e4e73baa;
+  margin-top: 5%;
+}
+
+.alert-error {
+	width: auto;
+  padding: 30px 0 30px 0;
+  background-color: #d36A;
+  margin-top: 5%;
+}
+  
+
+.alert-error #err {
+	font-size: 0.8vw;
+}
