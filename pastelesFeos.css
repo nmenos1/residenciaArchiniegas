@@ -181,3 +181,8 @@ textarea[type="subject"] {
 .alert-error #err {
 	font-size: 0.8vw;
 }
+
+#flor{
+  position: absolute;
+  top: 0px;
+}
